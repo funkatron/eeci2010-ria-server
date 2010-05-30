@@ -1,0 +1,3 @@
+Server-side app code for EECI2010 presentation on creating RIAs with Javascript and CodeIgniter
+
+You'll need to make cache, log and files directories that are writable by the web server.
