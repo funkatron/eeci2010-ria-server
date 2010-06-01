@@ -15,9 +15,11 @@ class Model_microblog extends MY_Model
     public function getAll($value='') {
         $data = array('posts'=>array());
         $cursor = $this->posts->find();
-
+        
         while( $cursor->hasNext() ) {
-            $data['posts'][] = $cursor->getNext();
+            $newitem = $cursor->getNext();
+            $newitem['_id'] = $newitem['_id']."";
+            $data['posts'][] = $newitem;
         };
         
         $data['posts'] = array_reverse($data['posts']);
